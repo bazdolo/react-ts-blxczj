@@ -21,9 +21,13 @@ const List = ({ items }: {items: string[]}) => {
   );
 };
 
+const doSomething = (e: React.MouseEvent<HTMLDivElement>) => {
+
+}
+
 export default function App() {
   return (
-    <div style={{ padding: '1rem', fontWeight: 'bold' }}>
+    <div onClick={(e) => doSomething(e)} style={{ padding: '1rem', fontWeight: 'bold' }}>
       <Heading title="Introduction" />
       <Box>Hello there</Box>
       <List items={['one', 'two', 'Three']} />
